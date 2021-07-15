@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %} Login {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<form method="post">
+    <div class="mb-3">
+        <label class="form-label" for="InputEmail">Email</label>
+        <input type="email" id="InputEmail" class="form-control" name="email" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" for="InputPassword">Password</label>
+        <input type="password" id="InputPassword" class="form-control" name="password" required>
+    </div>
+    <input type="submit" value="Masuk" class="btn btn-danger w-100">
+</form>
+{% endblock %}

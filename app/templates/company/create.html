@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %} New Company {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label" for="InputName">Nama Perusahaan</label>
+            <input type="text" id="InputName" class="form-control" name="name" required>
+        </div>
+        <input type="submit" value="Simpan" class="btn btn-danger w-100">
+    </form>
+{% endblock %}

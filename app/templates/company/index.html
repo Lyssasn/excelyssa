@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block header %}
+    <h1>{% block title %} Companies {% endblock %}</h1>
+    {% if g.user %}
+        <a class="btn btn-danger" href="{{ url_for('company.create') }}">New</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% for company in companies %}
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="{{ url_for('company.update', id=company['id']) }}">{{ company['name'] }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+{% endblock %}
